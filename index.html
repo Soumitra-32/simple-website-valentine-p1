@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>valentine special gift❤️</title>
+
+<!-- Added Typewriter Font -->
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Special Elite', cursive; /* changed font */
+  overflow-y:auto; /* enable vertical scroll */
+  overflow-x:hidden;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  height:auto;
+  padding:40px 0;
+  position:relative;
+  cursor:pointer;
+}
+
+
+.page{
+  display:none;
+  text-align:center;
+  background:rgba(255,255,255,0.3);
+  padding:40px;
+  border-radius:25px;
+  backdrop-filter:blur(12px);
+  max-width:700px;
+  width:90%;
+  opacity:0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  box-shadow: 0 8px 30px rgba(255,20,147,0.4);
+  animation:floatCard 4s ease-in-out infinite alternate;
+}
+
+.active{
+  display:block;
+  opacity:1;
+  transform: translateY(0);
+}
+
+@keyframes floatCard{
+  0%{transform: translateY(0);}
+  50%{transform: translateY(-10px);}
+  100%{transform: translateY(0);}
+}
+
+h1{
+  color:#ff1493;
+  text-shadow:0 0 10px #fff, 0 0 25px #ff99cc;
+  animation:glow 2s infinite alternate;
+}
+
+h2{
+  color:#ff69b4;
+  text-shadow: 0 0 5px #fff, 0 0 20px #ff69b4;
+  margin-top:20px;
+}
+
+
+button{
+  margin:15px;
+  padding:12px 25px;
+  border:none;
+  border-radius:25px;
+  background:linear-gradient(45deg,#ff1493,#ff69b4);
+  color:white;
+  font-size:1rem;
+  transition:0.3s, transform 0.4s ease, box-shadow 0.4s ease;
+  cursor:pointer;
+}
+
+button:hover{
+  transform: scale(1.08) rotate(-1deg);
+  box-shadow:0 0 20px #ff69b4;
+}
+
+@keyframes bounce{
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+@keyframes glow{
+  from{ text-shadow:0 0 5px #fff,0 0 15px #ff69b4; }
+  to{ text-shadow:0 0 15px #fff,0 0 30px #ff1493; }
+}
+
+
+.heart{
+  position:fixed;
+  font-size:20px;
+  animation:fall linear forwards;
+  pointer-events:none;
+  z-index:0;
+}
+
+@keyframes fall{
+  0%{ transform:translateY(-10vh) rotate(0); opacity:1;}
+  100%{ transform:translateY(110vh) rotate(360deg); opacity:0;}
+}
+
+
+.gallery img{
+  width:155px;
+  margin:8px;
+  border-radius:15px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+.gallery img:hover{
+  transform: scale(1.15) rotateZ(5deg);
+  box-shadow: 0 15px 30px rgba(255, 20, 147, 0.7);
+  filter: brightness(1.3) saturate(1.5);
+}
+
+
+#partyMessage{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%) scale(0.5);
+  font-size:2.8rem;
+  font-weight:bold;
+  text-align:center;
+  color:white;
+  background:linear-gradient(45deg,#ff1493,#ff69b4,#ff85c1);
+  padding:40px 60px;
+  border-radius:30px;
+  box-shadow:0 0 40px rgba(255,255,255,0.8),
+             0 0 80px rgba(255,20,147,0.9);
+  z-index:9999;
+  display:none;
+  opacity:0;
+  transition:all 1s ease;
+  animation:partyGlow 2s infinite alternate;
+}
+
+@keyframes partyGlow{
+  from{
+    box-shadow:0 0 30px rgba(255,255,255,0.7),
+               0 0 60px rgba(255,20,147,0.7);
+  }
+  to{
+    box-shadow:0 0 60px rgba(255,255,255,1),
+               0 0 120px rgba(255,20,147,1);
+  }
+}
+
+
+.firework{
+  position:fixed;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  pointer-events:none;
+  animation:explode 3s ease-out forwards;
+}
+
+@keyframes explode{
+  0%{transform:scale(1); opacity:1;}
+  100%{transform:translate(var(--x),var(--y)) scale(0.5); opacity:0;}
+}
+
+
+.heartExplosion{
+  position:fixed;
+  font-size:24px;
+  pointer-events:none;
+  animation:heartBlast 1s ease-out forwards;
+  z-index:9998;
+}
+
+@keyframes heartBlast{
+  0%{transform:scale(0.5); opacity:1;}
+  100%{transform:translate(var(--x),var(--y)) scale(1.5); opacity:0;}
+}
+
+/* Typewriter Animation */
+.typewriter {
+  overflow: hidden;
+  border-right: 3px solid #ff1493;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  animation: typing 3s steps(40, end), blink 0.8s infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  0% { border-color: #ff1493 }
+  50% { border-color: transparent }
+  100% { border-color: #ff1493 }
+}
+</style>
+</head>
+<body>
+
+<div id="page1" class="page active">
+  <h1 class="typewriter">Hey pushpa!!❤️</h1>
+  <p>This is for you </p>
+  <button onclick="showPage(2)" style="animation:bounce 2s infinite;">Open 💌</button>
+</div>
+
+<div id="page2" class="page">
+  <h1 class="typewriter">Sotti kotha dine 14 bar bola jay...💕</h1>
+  
+  <p>Even after all this time, I still find myself falling for you every single day.
+     I love you not just for who you are, but for how I am when I’m with you.
+      Even though we fight sometimes and you can drive me a little crazy, I would not change a single thing.
+I love you so much✨💖</p>
+  <button onclick="showPage(3)">See Memories 📸</button>
+</div>
+
+<div id="page3" class="page">
+  <h1>Our Memories📸</h1>
+  <h2>Eto valo chobi konta rekhe konta dibo (•́ ᴖ •̀)</h2>
+  <div class="gallery">
+    <img src="one.jpg">
+    <img src="two.jpg">
+    <img src="seven.jpg">
+    <img src="eight.jpg">
+    <img src="four.jpg">
+    <img src="five.jpg">
+    <img src="six.jpg">
+    
+
+  </div>
+  
+  <button onclick="showPage(4)" style="animation:bounce 2s infinite;">Will You Be My Valentine? 💘</button>
+</div>
+
+<div id="page4" class="page">
+  <div id="valentineCard" style="position:relative;">
+    <h1>Will You Be My Valentine? 💕</h1>
+    <button id="yesBtn" style="animation:bounce 2s infinite;">Yes 💖</button>
+    <button id="noBtn">No 😢</button>
+  </div>
+</div>
+
+<div id="partyMessage">
+  💖 Yaaayyy!!! 💖 <br>
+  ki no option  chapte giye tired 😂? yes chara kono option nai tomar jana kotha....<br>
+  You are now Soumtra's girl😎. See you on the campus.....
+</div>
+
+<script>
+function showPage(num){
+  document.querySelectorAll(".page").forEach(p=>{
+    p.style.display="none";
+    p.classList.remove("active");
+  });
+  const next=document.getElementById("page"+num);
+  next.style.display="block";
+  next.classList.add("active");
+}
+
+/* Impossible No Button */
+const noBtn=document.getElementById("noBtn");
+const valCard=document.getElementById("valentineCard");
+
+function moveNo(){
+  const rect=valCard.getBoundingClientRect();
+  const maxX=rect.width-noBtn.offsetWidth;
+  const maxY=rect.height-noBtn.offsetHeight;
+  noBtn.style.position="absolute";
+  noBtn.style.left=Math.random()*maxX+"px";
+  noBtn.style.top=Math.random()*maxY+"px";
+}
+
+document.addEventListener("mousemove",(e)=>{
+  const rect=noBtn.getBoundingClientRect();
+  const dist=Math.hypot(e.clientX-(rect.left+rect.width/2),
+                        e.clientY-(rect.top+rect.height/2));
+  if(dist<120) moveNo();
+});
+noBtn.addEventListener("click",moveNo);
+
+/* Fireworks */
+function createFirework(x,y){
+  for(let i=0;i<40;i++){
+    const f=document.createElement("div");
+    f.className="firework";
+    f.style.left=x+"px";
+    f.style.top=y+"px";
+    f.style.background=`hsl(${Math.random()*360},100%,60%)`;
+    f.style.setProperty("--x",(Math.random()*200-100)+"px");
+    f.style.setProperty("--y",(Math.random()*200-100)+"px");
+    document.body.appendChild(f);
+    setTimeout(()=>f.remove(),1000);
+  }
+}
+
+/* NEW: Heart Explosion Function */
+function createHeartExplosion(){
+  const yesBtn=document.getElementById("yesBtn");
+  const rect=yesBtn.getBoundingClientRect();
+  const centerX=rect.left+rect.width/2;
+  const centerY=rect.top+rect.height/2;
+
+  const hearts=["💖","💕","💘","❤️","💗"];
+
+  for(let i=0;i<30;i++){
+    const h=document.createElement("div");
+    h.className="heartExplosion";
+    h.innerHTML=hearts[Math.floor(Math.random()*hearts.length)];
+    h.style.left=centerX+"px";
+    h.style.top=centerY+"px";
+    h.style.setProperty("--x",(Math.random()*250-125)+"px");
+    h.style.setProperty("--y",(Math.random()*250-125)+"px");
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),1000);
+  }
+}
+
+/* YES Button */
+document.getElementById("yesBtn").addEventListener("click",()=>{
+
+  createHeartExplosion(); // added feature
+
+  setTimeout(()=>{
+    valCard.style.display="none";
+    const party=document.getElementById("partyMessage");
+    party.style.display="block";
+    setTimeout(()=>{
+      party.style.opacity=1;
+      party.style.transform="translate(-50%, -50%) scale(1)";
+    },50);
+
+    for(let i=0;i<6;i++){
+      setTimeout(()=>{
+        createFirework(Math.random()*window.innerWidth,
+                       Math.random()*window.innerHeight/2);
+      },i*400);
+    }
+  },500);
+
+});
+</script>
+
+</body>
+</html>
