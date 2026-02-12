@@ -11,8 +11,8 @@
 <style>
 body{
   margin:0;
-  font-family:'Special Elite', cursive; /* changed font */
-  overflow-y:auto; /* enable vertical scroll */
+  font-family:'Special Elite', cursive; 
+  overflow-y:auto; 
   overflow-x:hidden;
   background:linear-gradient(135deg,#ff9a9e,#fad0c4);
   display:flex;
@@ -186,7 +186,7 @@ button:hover{
   100%{transform:translate(var(--x),var(--y)) scale(1.5); opacity:0;}
 }
 
-/* Typewriter Animation */
+
 .typewriter {
   overflow: hidden;
   border-right: 3px solid #ff1493;
@@ -211,7 +211,7 @@ button:hover{
 <body>
 
 <div id="page1" class="page active">
-  <h1 class="typewriter">Hey pushpa!!❤️</h1>
+  <h1 class="typewriter">Hey love!!❤️</h1>
   <p>This is for you </p>
   <button onclick="showPage(2)" style="animation:bounce 2s infinite;">Open 💌</button>
 </div>
@@ -255,7 +255,7 @@ I love you so much✨💖</p>
 <div id="partyMessage">
   💖 Yaaayyy!!! 💖 <br>
   ki no option  chapte giye tired 😂? yes chara kono option nai tomar jana kotha....<br>
-  You are now Soumtra's girl😎. See you on the campus.....
+  You are now X's girl😎. See you on the campus.....
 </div>
 
 <script>
@@ -269,7 +269,7 @@ function showPage(num){
   next.classList.add("active");
 }
 
-/* Impossible No Button */
+
 const noBtn=document.getElementById("noBtn");
 const valCard=document.getElementById("valentineCard");
 
@@ -290,7 +290,7 @@ document.addEventListener("mousemove",(e)=>{
 });
 noBtn.addEventListener("click",moveNo);
 
-/* Fireworks */
+
 function createFirework(x,y){
   for(let i=0;i<40;i++){
     const f=document.createElement("div");
@@ -305,7 +305,7 @@ function createFirework(x,y){
   }
 }
 
-/* NEW: Heart Explosion Function */
+
 function createHeartExplosion(){
   const yesBtn=document.getElementById("yesBtn");
   const rect=yesBtn.getBoundingClientRect();
@@ -327,10 +327,10 @@ function createHeartExplosion(){
   }
 }
 
-/* YES Button */
+
 document.getElementById("yesBtn").addEventListener("click",()=>{
 
-  createHeartExplosion(); // added feature
+  createHeartExplosion(); 
 
   setTimeout(()=>{
     valCard.style.display="none";
